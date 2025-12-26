@@ -17,32 +17,10 @@ Aplicación web moderna para búsqueda y gestión de propiedades inmobiliarias, 
 - **Desktop**: Sidebar lateral, diseño en grid, más espacio
 - **Adaptativo**: Se ajusta automáticamente al tamaño de pantalla
 
-### 🚀 Funcionalidades Principales
-
-#### Autenticación
-- Onboarding interactivo
-- Login/Registro
-- Recuperación de contraseña
-
-#### Búsqueda y Exploración
-- Búsqueda avanzada de propiedades
-- Filtros y ordenamiento
-- Vista lista y grid
-- Mapa interactivo
-
-#### Detalles de Propiedad
-- Galería de imágenes
-- Información completa
-- Tour virtual 360°
-- Calculadora de hipotecas
-- Contacto con agente
-
-#### Herramientas
-- Calculadora de hipotecas
-- Comparar propiedades
-- Alertas personalizadas
-- Noticias del mercado
-- FAQ
+### 🗄️ Base de Datos
+- ✅ PostgreSQL con Neon
+- ✅ Esquema completo
+- ✅ Funciones de consulta listas
 
 ## 🛠️ Tecnologías
 
@@ -50,7 +28,7 @@ Aplicación web moderna para búsqueda y gestión de propiedades inmobiliarias, 
 - **Vite** - Build tool y dev server
 - **React Router** - Navegación
 - **Tailwind CSS** - Estilos responsive
-- **Material Symbols** - Iconos
+- **PostgreSQL** - Base de datos (Neon)
 - **PWA** - Service Worker y Manifest
 
 ## 📦 Instalación
@@ -62,12 +40,25 @@ npm install
 # Desarrollo
 npm run dev
 
+# Inicializar base de datos
+npm run db:init
+
 # Build para producción
 npm run build
-
-# Preview del build
-npm run preview
 ```
+
+## 📁 Estructura del Proyecto
+
+```
+├── src/              # Código fuente React
+├── public/           # Archivos estáticos y PWA
+├── database/         # Base de datos PostgreSQL
+├── scripts/          # Scripts de utilidad
+├── design/           # Diseños originales (referencia)
+└── docs/             # Documentación
+```
+
+Ver [docs/ESTRUCTURA_PROYECTO.md](./docs/ESTRUCTURA_PROYECTO.md) para detalles completos.
 
 ## 🚀 Despliegue
 
@@ -77,19 +68,7 @@ npm run preview
 2. Vercel detectará automáticamente Vite
 3. Deploy automático en cada push
 
-O manualmente:
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### Otros Proveedores
-
-La app es estática y puede desplegarse en:
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
-- Cualquier hosting estático
+Ver [docs/DEPLOY_VERCEL.md](./docs/DEPLOY_VERCEL.md) para más detalles.
 
 ## 📱 Instalar como App
 
@@ -103,24 +82,26 @@ La app es estática y puede desplegarse en:
 2. Menú → "Agregar a pantalla de inicio"
 3. Confirma
 
-### Desktop
-- Aparecerá icono de instalación en la barra de direcciones
+Ver [docs/GUIA_INSTALACION_IPHONE.md](./docs/GUIA_INSTALACION_IPHONE.md) para instrucciones detalladas.
 
-## 📁 Estructura del Proyecto
+## 📝 Scripts Disponibles
 
+```bash
+npm run dev              # Servidor de desarrollo
+npm run build           # Build para producción
+npm run preview         # Preview del build
+npm run generate-icons  # Generar iconos PWA
+npm run db:init         # Inicializar base de datos
 ```
-├── public/              # Archivos estáticos y PWA
-│   ├── manifest.json    # Configuración PWA
-│   ├── sw.js           # Service Worker
-│   └── icon-*.png      # Iconos PWA
-├── src/
-│   ├── components/      # Componentes reutilizables
-│   ├── pages/          # Páginas de la aplicación
-│   ├── utils/          # Utilidades
-│   └── App.jsx         # Componente principal
-├── vercel.json         # Configuración Vercel
-└── package.json        # Dependencias
-```
+
+## 📚 Documentación
+
+- [Estructura del Proyecto](./docs/ESTRUCTURA_PROYECTO.md)
+- [Flujo de la Aplicación](./docs/FLUJO_APLICACION.md)
+- [Guía de Instalación iPhone](./docs/GUIA_INSTALACION_IPHONE.md)
+- [Instrucciones PWA](./docs/INSTRUCCIONES_PWA.md)
+- [Base de Datos](./docs/README_DATABASE.md)
+- [Deploy en Vercel](./docs/DEPLOY_VERCEL.md)
 
 ## 🎯 Rutas Principales
 
@@ -133,59 +114,10 @@ La app es estática y puede desplegarse en:
 - `/calculator` - Calculadora de hipotecas
 - `/map` - Mapa de propiedades
 
-## 📝 Scripts Disponibles
-
-```bash
-npm run dev              # Servidor de desarrollo
-npm run build           # Build para producción
-npm run preview         # Preview del build
-npm run generate-icons  # Generar iconos PWA
-```
-
-## 🔧 Configuración
-
-### Variables de Entorno
-
-No se requieren variables de entorno para el funcionamiento básico.
-
-### Personalización
-
-- **Colores**: Edita `tailwind.config.js`
-- **Logo**: Reemplaza los iconos en `public/`
-- **Rutas**: Modifica `src/App.jsx`
-
 ## 📄 Licencia
 
 MIT License - Libre para uso personal y comercial.
 
-## 👨‍💻 Desarrollo
-
-### Agregar Nueva Página
-
-1. Crea el componente en `src/pages/`
-2. Agrega la ruta en `src/App.jsx`
-3. Actualiza la navegación si es necesario
-
-### Agregar Componente
-
-1. Crea el componente en `src/components/`
-2. Importa y usa donde necesites
-
-## 🐛 Troubleshooting
-
-### PWA no funciona
-- Verifica HTTPS (requerido para PWA)
-- Revisa que `manifest.json` y `sw.js` estén en `public/`
-- Verifica los iconos en DevTools → Application
-
-### Build falla
-- Ejecuta `npm install` nuevamente
-- Verifica que Node.js sea versión 16+
-
-## 📞 Soporte
-
-Para problemas o preguntas, abre un issue en GitHub.
-
 ---
 
-Hecho con ❤️ usando React + Vite + Tailwind CSS
+Hecho con ❤️ usando React + Vite + Tailwind CSS + PostgreSQL
