@@ -1,19 +1,12 @@
-// Script para generar iconos PWA automáticamente
-import sharp from 'sharp';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+// Script para generar iconos PWA
+// Ejecutar con: node generate-icons.js
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require('fs');
+const path = require('path');
 
-const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
-const publicDir = path.join(__dirname, '..', 'public');
-
-// Crear SVG base
-const createSVG = (size) => {
-  return `
-<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+// Crear un SVG simple que luego se puede convertir a PNG
+const createSVGIcon = (size) => {
+  return `<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#137fec;stop-opacity:1" />
@@ -26,29 +19,17 @@ const createSVG = (size) => {
 </svg>`;
 };
 
-async function generateIcons() {
-  console.log('🎨 Generando iconos PWA...\n');
-  
-  for (const size of sizes) {
-    try {
-      const svg = createSVG(size);
-      const outputPath = path.join(publicDir, `icon-${size}x${size}.png`);
-      
-      await sharp(Buffer.from(svg))
-        .resize(size, size)
-        .png()
-        .toFile(outputPath);
-      
-      console.log(`✅ Generado: icon-${size}x${size}.png`);
-    } catch (error) {
-      console.error(`❌ Error generando icon-${size}x${size}.png:`, error.message);
-    }
-  }
-  
-  console.log('\n✨ ¡Iconos generados exitosamente!');
-  console.log('📁 Archivos guardados en: public/');
-  console.log('\n🚀 La PWA está lista para instalarse!');
-}
+const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
 
-generateIcons().catch(console.error);
+console.log('Generando iconos SVG...');
+sizes.forEach(size => {
+  const svg = createSVGIcon(size);
+  fs.writeFileSync(`icon-${size}x${size}.svg`, svg);
+  console.log(`✅ Creado: icon-${size}x${size}.svg`);
+});
+
+console.log('\n⚠️  Nota: Estos son archivos SVG. Para PNG necesitas:');
+console.log('1. Abrir create-icons-simple.html en el navegador');
+console.log('2. O usar una herramienta online para convertir SVG a PNG');
+console.log('3. O usar ImageMagick: convert icon-192x192.svg icon-192x192.png');
 
