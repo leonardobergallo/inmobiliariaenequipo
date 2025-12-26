@@ -1,149 +1,191 @@
-# Inmobiliaria en Equipo
+# 🏠 Inmobiliaria en Equipo
 
-Una aplicación web moderna inspirada en Remax para la gestión y búsqueda de propiedades inmobiliarias. **Totalmente responsive** - funciona perfectamente en móvil y desktop.
+Aplicación web moderna para búsqueda y gestión de propiedades inmobiliarias, inspirada en Remax. **Totalmente responsive** - funciona perfectamente en móvil y desktop. **PWA lista** - se puede instalar como app nativa.
 
-## 🚀 Características
+🌐 **Demo**: [inmobiliariaenequipo.vercel.app](https://inmobiliariaenequipo.vercel.app)
 
-### 📱 Diseño Responsive
+## ✨ Características
+
+### 📱 PWA (Progressive Web App)
+- ✅ Instalable desde el navegador (sin Play Store/App Store)
+- ✅ Funciona offline con Service Worker
+- ✅ Icono en pantalla de inicio
+- ✅ Experiencia como app nativa
+
+### 🎨 Diseño Responsive
 - **Móvil**: Navegación inferior, diseño vertical optimizado
 - **Desktop**: Sidebar lateral, diseño en grid, más espacio
 - **Adaptativo**: Se ajusta automáticamente al tamaño de pantalla
 
-### Pantallas de Autenticación
-- **Onboarding**: Carrusel de bienvenida con características principales
-- **Iniciar Sesión**: Autenticación de usuarios
-- **Registrarse**: Creación de nuevas cuentas
-- **Recuperar Contraseña**: Restablecimiento de contraseña
+### 🚀 Funcionalidades Principales
 
-### Pantallas Principales
-- **Inicio/Exploración**: Búsqueda de propiedades, destacadas y recién añadidas
-- **Resultados de Búsqueda**: Lista y vista de cuadrícula con filtros
-- **Detalle de Propiedad**: Información completa con galería, mapa y agente
-- **Tour Virtual**: Experiencia 360° para explorar propiedades
+#### Autenticación
+- Onboarding interactivo
+- Login/Registro
+- Recuperación de contraseña
 
-### Pantallas de Usuario
-- **Perfil**: Gestión de cuenta y acceso a todas las funciones
-- **Favoritos**: Propiedades guardadas
-- **Chat en Vivo**: Comunicación directa con agentes
-- **Contacto**: Formulario para contactar agentes
+#### Búsqueda y Exploración
+- Búsqueda avanzada de propiedades
+- Filtros y ordenamiento
+- Vista lista y grid
+- Mapa interactivo
 
-### Herramientas
-- **Calculadora de Hipotecas**: Simulación de pagos mensuales
-- **Mapa de Propiedades**: Vista de propiedades en mapa
-- **Comparar Propiedades**: Comparación lado a lado
-- **Alertas de Propiedades**: Notificaciones personalizadas
+#### Detalles de Propiedad
+- Galería de imágenes
+- Información completa
+- Tour virtual 360°
+- Calculadora de hipotecas
+- Contacto con agente
 
-### Funciones Adicionales
-- **Publicar Propiedad**: Para agentes publicar nuevas propiedades
-- **Noticias del Mercado**: Artículos y tendencias
-- **Preguntas Frecuentes**: FAQ con búsqueda
+#### Herramientas
+- Calculadora de hipotecas
+- Comparar propiedades
+- Alertas personalizadas
+- Noticias del mercado
+- FAQ
 
 ## 🛠️ Tecnologías
 
-- **React 18**: Framework de UI
-- **Vite**: Build tool y dev server
-- **React Router**: Navegación entre páginas
-- **Tailwind CSS**: Estilos y diseño responsive
-- **Material Symbols**: Iconos
+- **React 18** - Framework de UI
+- **Vite** - Build tool y dev server
+- **React Router** - Navegación
+- **Tailwind CSS** - Estilos responsive
+- **Material Symbols** - Iconos
+- **PWA** - Service Worker y Manifest
 
 ## 📦 Instalación
 
-1. Instala las dependencias:
 ```bash
+# Instalar dependencias
 npm install
-```
 
-2. Inicia el servidor de desarrollo:
-```bash
+# Desarrollo
 npm run dev
+
+# Build para producción
+npm run build
+
+# Preview del build
+npm run preview
 ```
 
-3. Abre tu navegador en `http://localhost:5173`
+## 🚀 Despliegue
 
-## 🏗️ Estructura del Proyecto
+### Vercel (Recomendado)
 
-```
-src/
-├── components/          # Componentes reutilizables
-│   ├── Header.jsx      # Barra superior con logo y navegación
-│   ├── Navbar.jsx      # Barra de navegación (inferior móvil / lateral desktop)
-│   ├── Logo.jsx        # Componente del logo
-│   └── PropertyCard.jsx # Tarjeta de propiedad
-├── pages/              # Páginas de la aplicación
-│   ├── Onboarding.jsx
-│   ├── Login.jsx
-│   ├── Register.jsx
-│   ├── Home.jsx
-│   ├── SearchResults.jsx
-│   ├── PropertyDetail.jsx
-│   ├── VirtualTour.jsx
-│   ├── Profile.jsx
-│   ├── Favorites.jsx
-│   ├── Chat.jsx
-│   ├── Contact.jsx
-│   ├── MortgageCalculator.jsx
-│   ├── PropertyMap.jsx
-│   ├── CompareProperties.jsx
-│   ├── PropertyAlerts.jsx
-│   ├── PublishProperty.jsx
-│   ├── News.jsx
-│   └── FAQ.jsx
-├── App.jsx             # Componente principal con rutas
-├── main.jsx            # Punto de entrada
-└── index.css           # Estilos globales
+1. Conecta tu repositorio de GitHub a Vercel
+2. Vercel detectará automáticamente Vite
+3. Deploy automático en cada push
+
+O manualmente:
+```bash
+npm install -g vercel
+vercel --prod
 ```
 
-## 🎨 Diseño
+### Otros Proveedores
 
-La aplicación utiliza un diseño inspirado en Remax con:
-- **Colores principales**: Azul (#137fec) y Rojo (#E11B22)
-- **Diseño responsive**: Mobile-first, adaptable a diferentes tamaños
-- **Modo oscuro**: Soporte completo para tema oscuro
-- **UI moderna**: Interfaz limpia y profesional
+La app es estática y puede desplegarse en:
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+- Cualquier hosting estático
 
-### Breakpoints
-- **Móvil**: < 768px (navegación inferior)
-- **Desktop**: ≥ 768px (sidebar lateral)
+## 📱 Instalar como App
 
-## 🔄 Flujo de la Aplicación
+### Android (Chrome/Edge)
+1. Abre la web en Chrome
+2. Aparecerá "Agregar a pantalla de inicio"
+3. Toca "Agregar"
 
-Ver [FLUJO_APLICACION.md](./FLUJO_APLICACION.md) para el flujo completo.
+### iOS (Safari)
+1. Abre en Safari
+2. Menú → "Agregar a pantalla de inicio"
+3. Confirma
 
-### Flujo Principal
-1. **Onboarding** → Primera vez
-2. **Login/Register** → Autenticación
-3. **Home** → Exploración
-4. **Navegación** → Todas las funciones
+### Desktop
+- Aparecerá icono de instalación en la barra de direcciones
 
-## 🔐 Autenticación
+## 📁 Estructura del Proyecto
 
-La autenticación se maneja mediante localStorage. Para una aplicación de producción, deberías:
-- Implementar un backend con autenticación real
-- Usar tokens JWT o sesiones
-- Validar credenciales en el servidor
+```
+├── public/              # Archivos estáticos y PWA
+│   ├── manifest.json    # Configuración PWA
+│   ├── sw.js           # Service Worker
+│   └── icon-*.png      # Iconos PWA
+├── src/
+│   ├── components/      # Componentes reutilizables
+│   ├── pages/          # Páginas de la aplicación
+│   ├── utils/          # Utilidades
+│   └── App.jsx         # Componente principal
+├── vercel.json         # Configuración Vercel
+└── package.json        # Dependencias
+```
 
-## 📱 Navegación
+## 🎯 Rutas Principales
 
-- **Rutas públicas**: `/onboarding`, `/login`, `/register`, `/forgot-password`
-- **Rutas protegidas**: Todas las demás rutas requieren autenticación
-- **Navegación móvil**: Barra inferior fija
-- **Navegación desktop**: Sidebar lateral
+- `/` - Home
+- `/search` - Búsqueda
+- `/property/:id` - Detalle de propiedad
+- `/favorites` - Favoritos
+- `/profile` - Perfil
+- `/chat` - Mensajes
+- `/calculator` - Calculadora de hipotecas
+- `/map` - Mapa de propiedades
 
-## 🚀 Build para Producción
+## 📝 Scripts Disponibles
 
 ```bash
-npm run build
+npm run dev              # Servidor de desarrollo
+npm run build           # Build para producción
+npm run preview         # Preview del build
+npm run generate-icons  # Generar iconos PWA
 ```
 
-Los archivos optimizados se generarán en la carpeta `dist/`.
+## 🔧 Configuración
 
-## 📝 Notas
+### Variables de Entorno
 
-- Las imágenes de propiedades son placeholders de ejemplo
-- Los datos de propiedades están hardcodeados para demostración
-- Para producción, conecta con una API backend real
-- El mapa es una imagen estática; considera integrar Google Maps o Mapbox
+No se requieren variables de entorno para el funcionamiento básico.
+
+### Personalización
+
+- **Colores**: Edita `tailwind.config.js`
+- **Logo**: Reemplaza los iconos en `public/`
+- **Rutas**: Modifica `src/App.jsx`
 
 ## 📄 Licencia
 
-Este proyecto es de código abierto y está disponible para uso personal y comercial.
+MIT License - Libre para uso personal y comercial.
+
+## 👨‍💻 Desarrollo
+
+### Agregar Nueva Página
+
+1. Crea el componente en `src/pages/`
+2. Agrega la ruta en `src/App.jsx`
+3. Actualiza la navegación si es necesario
+
+### Agregar Componente
+
+1. Crea el componente en `src/components/`
+2. Importa y usa donde necesites
+
+## 🐛 Troubleshooting
+
+### PWA no funciona
+- Verifica HTTPS (requerido para PWA)
+- Revisa que `manifest.json` y `sw.js` estén en `public/`
+- Verifica los iconos en DevTools → Application
+
+### Build falla
+- Ejecuta `npm install` nuevamente
+- Verifica que Node.js sea versión 16+
+
+## 📞 Soporte
+
+Para problemas o preguntas, abre un issue en GitHub.
+
+---
+
+Hecho con ❤️ usando React + Vite + Tailwind CSS
