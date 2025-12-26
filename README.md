@@ -1,8 +1,8 @@
-# 🏠 Inmobiliaria en Equipo
+# 🏠 Inmobiliaria en Equipo Agente
 
 Aplicación web moderna para búsqueda y gestión de propiedades inmobiliarias, inspirada en Remax. **Totalmente responsive** - funciona perfectamente en móvil y desktop. **PWA lista** - se puede instalar como app nativa.
 
-🌐 **Demo**: [inmobiliariaenequipo.vercel.app](https://inmobiliariaenequipo.vercel.app)
+🌐 **Demo**: [inmobiliariaenequipoagente.vercel.app](https://inmobiliariaenequipoagente.vercel.app)
 
 ## ✨ Características
 

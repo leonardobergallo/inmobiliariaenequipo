@@ -1,6 +1,6 @@
 {
-  "name": "Inmobiliaria en Equipo",
-  "short_name": "Inmobiliaria",
+  "name": "Inmobiliaria en Equipo Agente",
+  "short_name": "Inmobiliaria Agente",
   "description": "Encuentra tu hogar ideal - Búsqueda de propiedades inmobiliarias",
   "start_url": "/",
   "display": "standalone",
