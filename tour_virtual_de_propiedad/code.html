@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour Virtual de Propiedad</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "surface-dark": "#1a2634",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col pb-24">
+<!-- Immersive Video Player Section -->
+<div class="relative w-full aspect-[3/4] sm:aspect-video bg-black group overflow-hidden rounded-b-xl shadow-lg">
+<!-- Video Background Placeholder -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern spacious living room with large windows and sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhlD009AU3m_jXBmBTXtfygtln5NWDd-iWjEUaE6twZtv2zvQqoHX0qOFFIPebF92T0v-H1dHLOlmxkph08fv4b0ulZOeM8Wwg6tK8-qmvsB4DrNYb_uQyNToQE6NM8OAM0T9qZw_4SAUm8qhq2x9xSzhKb5fTgB3eHjii90hbShVcXsoiy8qgBRCTZbKHk0NWvj0Bx0k8yYB02xp-QqEw6CNmY9RB-lSAsLUisseHZ1MsI210SVTBUdSvvr6omoW4LumFsytNGzk");'>
+<!-- Overlay Gradient for legibility of top controls -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60"></div>
+</div>
+<!-- Top Navigation (Overlay) -->
+<div class="absolute top-0 left-0 w-full p-4 pt-12 flex items-center justify-between z-20">
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex gap-3">
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-black/20 backdrop-blur-md text-white hover:bg-black/40 transition">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Center Play Button -->
+<div class="absolute inset-0 flex items-center justify-center z-10">
+<button class="flex shrink-0 items-center justify-center rounded-full size-20 bg-primary/90 text-white shadow-[0_0_40px_rgba(19,127,236,0.6)] hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-[40px]">play_arrow</span>
+</button>
+</div>
+<!-- Bottom Player Controls Overlay -->
+<div class="absolute bottom-0 left-0 w-full p-4 z-20">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">En vivo</span>
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">360</span> Tour 360°
+                        </span>
+</div>
+<button class="text-white hover:text-primary transition">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1 bg-white/30 rounded-full overflow-hidden">
+<div class="h-full w-1/3 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Inmobiliaria Logo Watermark -->
+<div class="absolute bottom-20 right-4 opacity-50 z-10 hidden sm:block">
+<p class="text-[10px] font-bold text-white uppercase tracking-widest">Inmobiliaria en Equipo</p>
+</div>
+</div>
+<!-- Room Navigator (Segmented Scroll) -->
+<div class="flex w-full overflow-x-auto no-scrollbar gap-3 p-4 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 sticky top-0 z-30">
+<button class="shrink-0 px-4 py-2 rounded-full bg-primary text-white text-sm font-medium shadow-md transition">
+                General
+            </button>
+<button class="shrink-0 px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Sala
+            </button>
+<button class="shrink-0 px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Cocina
+            </button>
+<button class="shrink-0 px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Recámara Principal
+            </button>
+<button class="shrink-0 px-4 py-2 rounded-full bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                Jardín
+            </button>
+</div>
+<!-- Property Details Section -->
+<div class="flex flex-col px-4 pt-5 gap-1">
+<div class="flex items-start justify-between">
+<div>
+<h1 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-tight">$5,250,000 MXN</h1>
+<h2 class="text-[#111418] dark:text-gray-200 text-lg font-medium leading-tight mt-1">Modern Loft en Centro Histórico</h2>
+</div>
+<!-- Rating / Verified Badge -->
+<div class="flex flex-col items-end">
+<div class="flex items-center gap-1 text-yellow-500">
+<span class="material-symbols-outlined text-[18px] fill-current">star</span>
+<span class="text-sm font-bold text-[#111418] dark:text-white">4.9</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 mt-2 text-[#637588] dark:text-[#9dabb9]">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<p class="text-sm font-normal">Av. Siempreviva 123, Springfield</p>
+</div>
+</div>
+<!-- Key Features Grid -->
+<div class="grid grid-cols-3 gap-3 px-4 py-6">
+<div class="flex flex-col items-center justify-center p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">bed</span>
+<span class="text-sm font-bold text-[#111418] dark:text-white">3</span>
+<span class="text-xs text-[#637588] dark:text-gray-400">Recámaras</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">bathtub</span>
+<span class="text-sm font-bold text-[#111418] dark:text-white">2</span>
+<span class="text-xs text-[#637588] dark:text-gray-400">Baños</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-1">square_foot</span>
+<span class="text-sm font-bold text-[#111418] dark:text-white">120m²</span>
+<span class="text-xs text-[#637588] dark:text-gray-400">Terreno</span>
+</div>
+</div>
+<!-- Description Accordion -->
+<div class="px-4 pb-4">
+<h3 class="text-[#111418] dark:text-white font-bold text-base mb-2">Descripción</h3>
+<p class="text-[#637588] dark:text-gray-300 text-sm leading-relaxed">
+                Este espectacular loft combina el encanto histórico con acabados modernos de alta gama. Cuenta con techos de doble altura, pisos de madera original restaurada y una cocina de concepto abierto ideal para el entretenimiento. Ubicado en el corazón de la ciudad, a pasos de los mejores restaurantes y galerías.
+                <span class="text-primary font-medium ml-1 cursor-pointer">Leer más</span>
+</p>
+</div>
+<!-- Location Map Preview -->
+<div class="px-4 pb-6">
+<h3 class="text-[#111418] dark:text-white font-bold text-base mb-3">Ubicación</h3>
+<div class="relative w-full h-32 rounded-lg overflow-hidden" data-location="Springfield" style="https://lh3.googleusercontent.com/aida-public/AB6AXuC5oE6fjBhcfVtPi-oojumog_D9d1i1jnmkcHhr5bKzUWBPZAAxt_iVv1F-sdbUYZcbGNkUgIYIjcDTizJoldPezJWa5ESlLffjq31oi26OEAjZTFCzRoJrRrD6lyxsJk3_Xjao0A7dh60dzdfBwRU5VoR0RWEV8heeTW8eQEXGOMgT2GJXFl1lblmWB29MgnnSm-jhcdODVqyCNe_Qw0Jd6lmIGfVGpVVs2-ozern8CnAPXzb9QEh8IaFMeVQ_HlUr9f8GfPMLVJ8">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Map view of city center streets" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPhrTpLBXsnc1TxrA2f_yrfMQCX7IA14hgWCf-oMOmvlH5Ly6rKc2VcYRGpz-mxvLmBo229qCxudAwX4uZzL4FHz2oEjuyx7TMuQwrKlxq3ozpfP3TBhbmygrbZ8Iv-JGUerQ0LgoZeBtdEC-OhqnMZeXi0xW3ka_UOYXIRYrFl_LI-kVJSZ4byHRopG0pV2N7xiSRmSZU3xvlXgqp2ddfLiJd_bZOLyx2an3o86KsJkjUC1TXSRZmvbGoMxXCYLzmX2NQ6xHFUrQ");'></div>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center">
+<button class="bg-white dark:bg-background-dark text-[#111418] dark:text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">map</span>
+                        Ver en mapa
+                    </button>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Agent Action Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 p-4 pb-8 z-40 shadow-[0_-5px_15px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-3">
+<!-- Agent Avatar (Small) -->
+<div class="shrink-0 relative">
+<div class="size-12 rounded-full bg-gray-300 bg-cover bg-center border-2 border-white dark:border-gray-700" data-alt="Portrait of a smiling real estate agent" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3U6g7bh9_r8ujo3WY03JGKBp2o4cHVvwjc1--JVHba_nrL2Cgf7oEfTX8aXjf_QTtKUdQlliD0xcE5yMYHSVfU-Tq-pQbvJ8oSnna1Akik4Q8wmjD3-YPgm-31UBKjyYHLtbhpZbsnKfiTjNqyX6G65WGMeuUt3HReYa8kfDuOEkmPL3iXEdx4CXbH3IiWdchOOCzBIcTHcXBqzcZqF-xa9hMkBATudzQzi0RS8GrvlDINHVVPsLTfvi-tBh5otxYyFTIpCnovFg");'></div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-white dark:border-surface-dark"></div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-1 gap-2">
+<button class="flex-1 flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 text-[#111418] dark:text-white h-12 rounded-lg font-bold text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+<button class="flex-[3] flex items-center justify-center gap-2 bg-primary text-white h-12 rounded-lg font-bold text-sm shadow-lg shadow-primary/20 hover:bg-blue-600 transition">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                        Agendar Visita
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

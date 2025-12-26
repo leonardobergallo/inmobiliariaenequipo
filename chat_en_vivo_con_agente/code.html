@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chat en Vivo - Inmobiliaria en Equipo</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "gray-light": "#f0f2f4",
+                        "gray-dark": "#1e2832",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark h-screen overflow-hidden flex flex-col antialiased text-[#111418] dark:text-white">
+<!-- Header / Navigation Bar -->
+<header class="shrink-0 flex items-center justify-between px-4 py-3 bg-white dark:bg-background-dark border-b border-[#e5e7eb] dark:border-[#22303c] z-10 shadow-sm">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-[#111418] dark:text-white">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<div class="relative flex-shrink-0">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-white dark:border-background-dark shadow-sm" data-alt="Portrait of real estate agent Ana Martinez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoXUNFdL1rpnTQWztLPSirrdOJjKikuici6hphXk_lK5oEepurviWZTqhqaJWDqpx7ZTr697JQOJ4aqTs1gO1lSheWoxso0n4P2RG7slYrT6YGNy0nTWb26_F22jM0sUoDXuDDFiXgiKO1Fou6Ztu6EXMokVfwTHNJNQxo-aY0FKJJcfWYvCF7lc-ZZb5whR4GIbgz_8CfqDO2Y3ez5sI1p5DOCTFizj45LF1vdJJLy-_NFnA3BY1d5mS12cxoyFHcXjOjFN_mBqs");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 rounded-full border-2 border-white dark:border-background-dark"></div>
+</div>
+<div class="flex flex-col justify-center">
+<h2 class="text-[#111418] dark:text-white text-base font-bold leading-tight">Ana Martínez</h2>
+<p class="text-green-600 dark:text-green-400 text-xs font-medium">En línea</p>
+</div>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors text-primary">
+<span class="material-symbols-outlined text-[24px]">call</span>
+</button>
+</header>
+<!-- Chat Area -->
+<main class="flex-1 overflow-y-auto w-full p-4 flex flex-col gap-4 bg-background-light dark:bg-background-dark">
+<!-- Timestamp -->
+<div class="flex justify-center w-full py-2">
+<p class="text-[#617589] dark:text-[#94a3b8] text-xs font-medium bg-white/50 dark:bg-black/20 px-3 py-1 rounded-full">Hoy, 10:30 AM</p>
+</div>
+<!-- System Message -->
+<div class="flex justify-center w-full pb-2">
+<p class="text-[#617589] dark:text-[#94a3b8] text-xs text-center max-w-[80%] leading-relaxed">
+<span class="material-symbols-outlined align-middle text-sm mr-1">info</span>
+                Te has conectado con un agente. La respuesta típica es de 5 minutos.
+            </p>
+</div>
+<!-- Agent Message (Incoming) -->
+<div class="flex items-end gap-3 w-full max-w-[85%] self-start group">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-8 shrink-0 mb-1 shadow-sm" data-alt="Small avatar of agent Ana Martinez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOSbC0Wt7QOGXzqlLzROBzyPt7i1Y8MPjagPenvO9K4ElEvwk4wMnycwTL5DE0E9bTzxSVVFcbQkmW-MNX72K_y0CTuZyOJrjvdkdTdUVyWRa354bmGrccmlE7qc4uxHy5glwyClDPxBpsZvE7CIYne7Xtoj9aoDukQp6hyPLS_OOk4mkUUoh77GpUhuMXcvcdlkUzCGdt8Ewq47wD-v5zkiDl2seoQ6YzWwM9aJUSvinbmh4ng-W5VLBIjH0c5uePaGKEJA9YVxI");'>
+</div>
+<div class="flex flex-col gap-1 items-start">
+<span class="text-[#617589] dark:text-[#94a3b8] text-xs ml-1">Ana Martínez</span>
+<div class="p-3 bg-white dark:bg-gray-dark rounded-2xl rounded-bl-none shadow-sm text-[#111418] dark:text-white text-[15px] leading-relaxed border border-gray-100 dark:border-gray-700">
+<p>¡Hola! 👋 Vi que te interesó el departamento en Palermo. ¿Tienes alguna duda?</p>
+</div>
+</div>
+</div>
+<!-- User Message (Outgoing) -->
+<div class="flex items-end gap-3 w-full max-w-[85%] self-end justify-end">
+<div class="flex flex-col gap-1 items-end">
+<div class="p-3 bg-primary text-white rounded-2xl rounded-br-none shadow-md text-[15px] leading-relaxed">
+<p>Hola Ana, sí. ¿El precio incluye la cochera?</p>
+</div>
+<div class="flex items-center gap-1 text-[11px] text-[#617589] dark:text-[#94a3b8] mr-1">
+<span>10:32 AM</span>
+<span class="material-symbols-outlined text-[14px] text-primary">done_all</span>
+</div>
+</div>
+</div>
+<!-- Agent Message (Incoming) -->
+<div class="flex items-end gap-3 w-full max-w-[85%] self-start">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-8 shrink-0 mb-1 shadow-sm" data-alt="Small avatar of agent Ana Martinez" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1z61_xw9Xo-08ObJA-HuDgO-9oe_MjJAO1Op4d_oGCtu4VlDCk0UL0gputF4OhgBM5g3xGWHL88MjIgoWmi2e9KFhMEtruUeK37lf24mzMV3toqkw2Bk_b21QHrLvRkI0ydwR7t9BHQ4x2WC710s5_Wf4XBHxfeATxT9TMPCx4cIBximfwUibexiPoJSfwDiJuu-iA8ikZqDkfZrxiYy8BpKPmNLHJwbtCTO9Xu0Cczlr6pcSN_YPLj0lUK0yXdbeRq1LdkNjT0w");'>
+</div>
+<div class="flex flex-col gap-1 items-start">
+<span class="text-[#617589] dark:text-[#94a3b8] text-xs ml-1">Ana Martínez</span>
+<div class="p-3 bg-white dark:bg-gray-dark rounded-2xl rounded-bl-none shadow-sm text-[#111418] dark:text-white text-[15px] leading-relaxed border border-gray-100 dark:border-gray-700">
+<p>Sí, el precio es final e incluye una cochera cubierta en el subsuelo. 🚗</p>
+</div>
+<div class="p-3 bg-white dark:bg-gray-dark rounded-2xl rounded-tl-none shadow-sm text-[#111418] dark:text-white text-[15px] leading-relaxed border border-gray-100 dark:border-gray-700 mt-1">
+<p>¿Te gustaría coordinar una visita para verla esta semana?</p>
+</div>
+</div>
+</div>
+<!-- User Message (Outgoing - Typing placeholder/latest) -->
+<!-- This represents where the next message would go, keeping the chat active -->
+<div class="h-4"></div> <!-- Spacer at bottom -->
+</main>
+<!-- Input Area (Footer) -->
+<footer class="shrink-0 bg-white dark:bg-background-dark border-t border-[#e5e7eb] dark:border-[#22303c] p-3 pb-6 sm:pb-3">
+<div class="flex items-end gap-2 max-w-4xl mx-auto">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-[#617589] dark:text-[#94a3b8] transition-colors shrink-0">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+</button>
+<div class="flex-1 bg-gray-light dark:bg-gray-dark rounded-[24px] flex items-center min-h-[44px] px-4 py-2 border border-transparent focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/10 transition-all">
+<input class="w-full bg-transparent border-none p-0 text-[#111418] dark:text-white placeholder-[#9CA3AF] focus:ring-0 text-[15px]" placeholder="Escribe un mensaje..." type="text"/>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary hover:bg-primary/90 text-white shadow-sm transition-colors shrink-0">
+<span class="material-symbols-outlined text-[20px] ml-0.5">send</span>
+</button>
+</div>
+</footer>
+</body></html>

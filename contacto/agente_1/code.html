@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar Sesión - Inmobiliaria en Equipo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DC2626","primary-dark": "#B91C1C",
+                        "secondary": "#1E3A8A","background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(156, 163, 175, 0.5);
+            border-radius: 20px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(667px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white overflow-x-hidden antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-white dark:bg-background-dark shadow-xl">
+<div class="sticky top-0 z-50 flex items-center bg-white dark:bg-background-dark p-4 pb-2 justify-between">
+<div class="text-[#111418] dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</div>
+<div class="flex-1"></div>
+<div class="w-12"></div> 
+</div>
+<div class="flex-1 overflow-y-auto px-6 pb-8 flex flex-col justify-center min-h-[500px]">
+<div class="flex flex-col items-center mb-10">
+<div class="relative mb-4">
+<div class="w-20 h-20 bg-gradient-to-br from-primary to-primary-dark rounded-xl flex items-center justify-center transform rotate-45 shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl -rotate-45">home_work</span>
+</div>
+<div class="absolute -bottom-2 -right-2 w-10 h-10 bg-secondary rounded-lg flex items-center justify-center transform rotate-12 shadow-md border-2 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-white text-lg -rotate-12">groups</span>
+</div>
+</div>
+<h1 class="text-[#111418] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] text-center mt-4">
+                    Inmobiliaria en Equipo
+                </h1>
+<p class="text-[#617589] dark:text-gray-400 text-sm mt-2 text-center max-w-[260px]">
+                    Bienvenido de nuevo. Accede para gestionar tus propiedades favoritas.
+                </p>
+</div>
+<form class="flex flex-col gap-5 w-full" onsubmit="event.preventDefault();">
+<div class="flex flex-col w-full">
+<label class="text-[#111418] dark:text-gray-200 text-sm font-semibold leading-normal pb-2 ml-1" for="email">
+                        Correo electrónico
+                    </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">mail</span>
+</div>
+<input class="form-input flex w-full rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/30 border border-[#dbe0e6] dark:border-gray-700 bg-gray-50 dark:bg-gray-800 h-12 placeholder:text-[#9aa2ac] dark:placeholder:text-gray-500 pl-10 pr-4 text-base font-normal leading-normal transition-all" id="email" placeholder="usuario@ejemplo.com" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col w-full">
+<label class="text-[#111418] dark:text-gray-200 text-sm font-semibold leading-normal pb-2 ml-1" for="password">
+                        Contraseña
+                    </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-gray-400 text-[20px]">lock</span>
+</div>
+<input class="form-input flex w-full rounded-xl text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/30 border border-[#dbe0e6] dark:border-gray-700 bg-gray-50 dark:bg-gray-800 h-12 placeholder:text-[#9aa2ac] dark:placeholder:text-gray-500 pl-10 pr-12 text-base font-normal leading-normal transition-all" id="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="flex justify-end">
+<a class="text-secondary dark:text-blue-400 text-sm font-medium hover:underline" href="#">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+</div>
+<div class="pt-2">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-4 bg-primary hover:bg-primary-dark text-white text-base font-bold leading-normal tracking-[0.015em] transition-all shadow-md hover:shadow-lg active:scale-[0.98]">
+<span class="truncate">Iniciar Sesión</span>
+</button>
+</div>
+</form>
+<div class="relative flex py-6 items-center">
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+<span class="flex-shrink-0 mx-4 text-gray-400 text-xs uppercase font-medium">O continúa con</span>
+<div class="flex-grow border-t border-gray-200 dark:border-gray-700"></div>
+</div>
+<div class="flex gap-4 justify-center mb-6">
+<button class="flex items-center justify-center w-14 h-14 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors shadow-sm bg-white dark:bg-gray-800">
+<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+</button>
+<button class="flex items-center justify-center w-14 h-14 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors shadow-sm bg-white dark:bg-gray-800">
+<svg class="w-6 h-6 text-black dark:text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.29 0-1.15.52-2.3 1.24-3.14C13.9 1.67 15.11.96 16.09.96c.14 0 .25.01.275.02v.45zM21.8 19.33c-.32 1.4-1.74 3.75-2.95 4.67-1.21.93-2.6.48-3.46-.03-1.07-.63-2.33-.53-3.41.03-.94.49-2.34.82-3.41-.05C7.26 23.03 3.83 18.2 3.83 13.06c0-4.04 2.58-6.19 5.06-6.19 1.48 0 2.45.69 3.19.69.75 0 2.08-.74 3.65-.63.63.03 2.4.26 3.53 1.91-.08.05-2.12 1.23-2.12 4.48 0 3.56 3.15 4.73 3.18 4.75-.02.08-.49 1.68-1.52 3.16z"></path>
+</svg>
+</button>
+</div>
+<div class="text-center mt-auto">
+<p class="text-[#617589] dark:text-gray-400 text-sm">
+                    ¿Aún no tienes cuenta? 
+                    <a class="text-primary hover:text-primary-dark font-bold ml-1 hover:underline" href="#">
+                        Regístrate aquí
+                    </a>
+</p>
+</div>
+</div>
+</div>
+
+</body></html>

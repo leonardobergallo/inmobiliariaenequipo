@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mapa de Propiedades - Inmobiliaria en Equipo</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            boxShadow: {
+                'float': '0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04)',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 h-screen w-full overflow-hidden flex flex-col">
+<!-- Main Container -->
+<div class="relative flex-1 w-full h-full">
+<!-- MAP LAYER -->
+<div class="absolute inset-0 z-0 w-full h-full bg-slate-200 dark:bg-slate-800">
+<!-- Map Image Placeholder -->
+<img alt="Interactive map view of city streets and blocks" class="w-full h-full object-cover opacity-80 dark:opacity-40 grayscale-[20%]" data-alt="Interactive map background showing city streets" data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWroSYCqUag_nubFlaTUCSY_1ykCek9JH8RpWcCEMAtqDsavGUYtAqFpxNafRw5eJyCYecOrJXubGPAHAsIAqUcCHWNcezektq5RRqZ6ij9kQunLX0wPyIS-SLCKsbey_5f7_5x_zC7K8OkGJGQ8KLC7iuP9krHF2PsCjKweReQzJgcvZvZbdA_UHcXz4iiiNFlqupGLMNLy9mbFhqM4jEauNtAzyzWHv1VzjwUXW4lAADI2oPyFSpt6wwkwV6YqiupvyKyH1lqHc"/>
+<!-- Map Pins -->
+<!-- Active Pin -->
+<button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 flex flex-col items-center group">
+<div class="bg-primary text-white px-3 py-1.5 rounded-full shadow-lg font-bold text-sm border-2 border-white dark:border-slate-700 transition-transform scale-110">
+                    USD 180k
+                </div>
+<div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-primary mt-[-1px]"></div>
+<div class="w-2 h-2 bg-black/20 rounded-full blur-[2px] mt-1"></div>
+</button>
+<!-- Inactive Pins -->
+<button class="absolute top-[30%] left-[20%] transform -translate-x-1/2 -translate-y-1/2 z-0 hover:z-10 flex flex-col items-center group transition-all hover:scale-105">
+<div class="bg-white dark:bg-slate-700 text-slate-800 dark:text-white px-2.5 py-1 rounded-full shadow-md font-semibold text-xs border border-slate-200 dark:border-slate-600">
+                    USD 120k
+                </div>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-white dark:border-t-slate-700 mt-[-1px]"></div>
+</button>
+<button class="absolute top-[60%] left-[75%] transform -translate-x-1/2 -translate-y-1/2 z-0 hover:z-10 flex flex-col items-center group transition-all hover:scale-105">
+<div class="bg-white dark:bg-slate-700 text-slate-800 dark:text-white px-2.5 py-1 rounded-full shadow-md font-semibold text-xs border border-slate-200 dark:border-slate-600">
+                    USD 240k
+                </div>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-white dark:border-t-slate-700 mt-[-1px]"></div>
+</button>
+<button class="absolute top-[25%] left-[80%] transform -translate-x-1/2 -translate-y-1/2 z-0 hover:z-10 flex flex-col items-center group transition-all hover:scale-105">
+<div class="bg-white dark:bg-slate-700 text-slate-800 dark:text-white px-2.5 py-1 rounded-full shadow-md font-semibold text-xs border border-slate-200 dark:border-slate-600">
+                    USD 95k
+                </div>
+<div class="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[6px] border-t-white dark:border-t-slate-700 mt-[-1px]"></div>
+</button>
+</div>
+<!-- TOP FLOATING UI (Search & Filters) -->
+<div class="absolute top-0 left-0 w-full z-20 flex flex-col gap-3 px-4 pt-12 pb-4 bg-gradient-to-b from-white/90 via-white/50 to-transparent dark:from-background-dark/90 dark:via-background-dark/50 pointer-events-none">
+<!-- Search Bar -->
+<div class="pointer-events-auto shadow-float rounded-lg w-full max-w-md mx-auto">
+<div class="flex w-full items-stretch rounded-lg h-12 bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+<div class="flex items-center justify-center pl-4 text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 bg-transparent border-none text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:ring-0 px-3 text-base font-normal" placeholder="Buscar ciudad, barrio o dirección" value="Belgrano, Buenos Aires"/>
+<button class="flex items-center justify-center px-4 text-primary border-l border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="pointer-events-auto w-full overflow-x-auto hide-scrollbar">
+<div class="flex gap-2 px-1 py-1">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-3 shadow-sm border border-transparent">
+<p class="text-xs font-medium">Venta</p>
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 pl-4 pr-3 shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-xs font-medium">Precio</p>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 pl-4 pr-3 shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-xs font-medium">Tipo</p>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 pl-4 pr-3 shadow-sm border border-slate-200 dark:border-slate-700">
+<p class="text-xs font-medium">Dormitorios</p>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT FLOATING CONTROLS -->
+<div class="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-3 z-20">
+<button class="flex size-10 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-float text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">layers</span>
+</button>
+<div class="flex flex-col rounded-full bg-white dark:bg-slate-800 shadow-float overflow-hidden">
+<button class="flex size-10 items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 border-b border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="flex size-10 items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+</div>
+<!-- BOTTOM UI (Card & FABs) -->
+<div class="absolute bottom-0 left-0 w-full z-20 flex flex-col items-end gap-4 p-4 pb-6 bg-gradient-to-t from-black/10 to-transparent">
+<!-- Floating Actions just above card -->
+<div class="flex flex-col gap-3">
+<button class="flex size-12 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-float text-primary hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+<button class="flex size-12 items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-float text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">view_list</span>
+</button>
+</div>
+<!-- Property Preview Card (Bottom Sheet style) -->
+<div class="w-full bg-white dark:bg-slate-800 rounded-xl shadow-[0_-4px_20px_rgba(0,0,0,0.1)] overflow-hidden cursor-pointer transform transition-transform hover:scale-[1.01]">
+<div class="flex p-3 gap-3">
+<!-- Image -->
+<div class="relative w-32 h-28 shrink-0 rounded-lg overflow-hidden bg-slate-200">
+<img alt="Modern apartment interior with large windows" class="w-full h-full object-cover" data-alt="Modern apartment interior living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCQxvmaVrPCE-Z5hT31zSrRTHBYgqIQPlh_HVvt4Xzh0vnXZRCtDoH_tj1LaHqqV0UOPaoFmYZRGVnM7O934mQEtMHLIqL911s4dQZ8fElVLTKfkRfqi7x6Al_noov87h46EpCLkqWArVRUOCu1XxGbZbiyP0GNINkeT09IEE-e8Rt4I47CUZWLpvcHqi7ZxIiYUkXFyqvBlU9XuHQ2J5uuzcnA3vjRPBz9LBMegW91Mj8wJzHtL8obZp6tfdbN7tlO6QfAKZEWb4"/>
+<div class="absolute top-1 right-1 bg-black/50 backdrop-blur-sm rounded px-1.5 py-0.5">
+<span class="text-[10px] font-bold text-white flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">photo_camera</span> 12
+                            </span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1 justify-between py-0.5">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white leading-tight">USD 180.000</h3>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<p class="text-sm font-medium text-slate-600 dark:text-slate-300 leading-tight">Av. del Libertador 4500</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Belgrano, Buenos Aires</p>
+</div>
+<div class="flex items-center gap-3 mt-2 text-slate-500 dark:text-slate-400">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bed</span>
+<span class="text-xs font-medium">3</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bathtub</span>
+<span class="text-xs font-medium">2</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">square_foot</span>
+<span class="text-xs font-medium">85 m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Footer Button -->
+<div class="bg-slate-50 dark:bg-slate-900/50 px-3 py-2 border-t border-slate-100 dark:border-slate-700 flex justify-end">
+<button class="text-primary text-sm font-semibold flex items-center gap-1 hover:underline">
+                        Ver detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- NAVIGATION BAR (Fixed Bottom) -->
+<div class="w-full h-16 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 flex items-center justify-around z-30 shrink-0">
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Inicio</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-current">map</span>
+<span class="text-[10px] font-medium">Mapa</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">favorite_border</span>
+<span class="text-[10px] font-medium">Favoritos</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</button>
+</div>
+</div>
+</body></html>

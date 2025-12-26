@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inmobiliaria en Equipo - Onboarding</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1313",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221010",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-100 font-display flex items-center justify-center min-h-screen p-0 sm:p-4">
+<!-- Mobile Container -->
+<div class="relative flex h-full min-h-screen w-full sm:max-w-md sm:h-[850px] sm:min-h-0 sm:rounded-[32px] sm:shadow-2xl flex-col bg-background-light dark:bg-background-dark group/design-root overflow-hidden border-0 sm:border-8 sm:border-white dark:sm:border-[#1a0b0b]">
+<!-- Decorative Background Blob -->
+<div class="absolute top-[-10%] right-[-20%] w-[80%] h-[40%] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute bottom-[-10%] left-[-20%] w-[80%] h-[40%] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- TopAppBar: Modified for Skip button -->
+<div class="relative z-10 flex items-center justify-between p-6 pb-2">
+<!-- Logo/Brand Hint -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">home_work</span>
+<span class="text-sm font-bold tracking-wider uppercase text-gray-800 dark:text-white opacity-80">Equipo</span>
+</div>
+<!-- Skip Button -->
+<button class="group flex items-center justify-end px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-bold leading-normal tracking-wide group-hover:text-primary transition-colors">Saltar</p>
+</button>
+</div>
+<!-- Main Content Area: Vertically Centered -->
+<div class="flex-1 flex flex-col items-center justify-center w-full px-6 relative z-10">
+<!-- Carousel Visual Representation -->
+<!-- We display the "Active" slide here as a large hero component -->
+<div class="w-full mb-8 relative group">
+<!-- Image Container with soft shadow and rounded corners -->
+<div class="w-full aspect-[4/5] bg-gray-200 rounded-[2rem] overflow-hidden shadow-xl shadow-primary/10 relative transform transition hover:scale-[1.01] duration-500">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Modern bright living room with large windows and comfortable furniture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQt-KA2OhmLg8zx53R0GgDXjyQA8856bhTQ7WJvol4_FqCIJFfrOmoY7ty8fSXQsbz4KxyjBAYZkp4qqaDV9eTwt89DSjDItut-bsFak1spkUS8PxKLqNADtklgSTw3WJpg208MnosgSIl1qm_2XcixQviBeOfRr5UcjVsjEp6us3DCSv8c6P7CDzcIzOUWYe-IpsQNM3mb7IincYZxu8qsmv-GjYE1lx1L-PG-LAgFNvGUtOpjTYwadcqlamc-dNJORk8uc2Jb6w");'>
+</div>
+<!-- Gradient Overlay for text readability if needed, though text is below -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+<!-- Floating Badge -->
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-xs font-bold text-gray-800 dark:text-white">Verificado</span>
+</div>
+</div>
+</div>
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-2 mb-6">
+<div class="h-2 w-8 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-white/20 transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-white/20 transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-gray-300 dark:bg-white/20 transition-all duration-300"></div>
+</div>
+<!-- HeadlineText -->
+<div class="w-full text-center mb-3">
+<h2 class="text-[#181111] dark:text-white tracking-tight text-[28px] font-extrabold leading-tight">
+                    Encuentra tu <span class="text-primary">hogar ideal</span>
+</h2>
+</div>
+<!-- BodyText -->
+<div class="w-full text-center px-4">
+<p class="text-gray-500 dark:text-gray-300 text-base font-medium leading-relaxed">
+                    Filtra por ubicación, precio y características únicas para descubrir la casa de tus sueños hoy mismo.
+                </p>
+</div>
+</div>
+<!-- Bottom Action Area -->
+<div class="w-full p-6 pb-10 relative z-10">
+<!-- Primary Button -->
+<button class="w-full bg-primary hover:bg-red-700 active:scale-[0.98] transition-all duration-200 text-white text-lg font-bold py-4 rounded-xl shadow-lg shadow-primary/30 flex items-center justify-center gap-2 mb-5">
+<span>Comenzar</span>
+<span class="material-symbols-outlined text-[20px] font-bold">arrow_forward</span>
+</button>
+<!-- Secondary Actions -->
+<div class="flex items-center justify-center gap-4 text-sm font-medium">
+<button class="text-[#181111] dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-4 py-2 rounded-lg">
+                    Iniciar sesión
+                </button>
+<div class="h-4 w-px bg-gray-300 dark:bg-white/20"></div>
+<button class="text-[#181111] dark:text-white hover:text-primary dark:hover:text-primary transition-colors px-4 py-2 rounded-lg">
+                    Registrarse
+                </button>
+</div>
+</div>
+<!-- Bottom spacer for safe area on mobile -->
+<div class="h-2 bg-transparent"></div>
+</div>
+</body></html>

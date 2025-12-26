@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Iconos PWA Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .icon-container {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #137fec 0%, #0d6bc2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 80px;
+            margin: 20px auto;
+            box-shadow: 0 4px 15px rgba(19, 127, 236, 0.3);
+        }
+        button {
+            background: #137fec;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0d6bc2;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Generador de Iconos PWA</h1>
+    
+    <div class="instructions">
+        <p><strong>Método Simple:</strong></p>
+        <p>Este generador crea iconos automáticamente con el logo de la app.</p>
+        <p>Haz clic en "Generar Todos los Iconos" y descarga los archivos.</p>
+    </div>
+    
+    <div class="icon-container">
+        <span>🏠</span>
+    </div>
+    
+    <button onclick="generateAllIcons()">Generar Todos los Iconos</button>
+    
+    <div id="downloads"></div>
+
+    <script>
+        const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+        
+        function generateAllIcons() {
+            sizes.forEach(size => {
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                const ctx = canvas.getContext('2d');
+                
+                // Fondo con gradiente
+                const gradient = ctx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, '#137fec');
+                gradient.addColorStop(1, '#0d6bc2');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, size, size);
+                
+                // Círculo rojo pequeño (accent)
+                ctx.fillStyle = '#E11B22';
+                ctx.beginPath();
+                ctx.arc(size * 0.15, size * 0.15, size * 0.08, 0, Math.PI * 2);
+                ctx.fill();
+                
+                // Icono de casa
+                ctx.fillStyle = 'white';
+                ctx.font = `bold ${size * 0.5}px Arial`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText('🏠', size / 2, size / 2);
+                
+                // Descargar
+                setTimeout(() => {
+                    canvas.toBlob(blob => {
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `icon-${size}x${size}.png`;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    });
+                }, size * 2); // Delay para evitar problemas
+            });
+            
+            alert('¡Iconos generados! Revisa tus descargas.');
+        }
+    </script>
+</body>
+</html>
+

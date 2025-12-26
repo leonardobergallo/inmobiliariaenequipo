@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inmobiliaria en Equipo - Resultados</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto bg-white dark:bg-[#111418] shadow-2xl">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-white dark:bg-[#111418] border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center p-4 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-[#111418] dark:text-white transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">arrow_back</span>
+</button>
+<div class="flex flex-1 flex-col items-center justify-center mx-2 cursor-pointer group">
+<h2 class="text-base font-bold leading-tight flex items-center gap-1 text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+                        Palermo, CABA
+                    </h2>
+<p class="text-xs text-gray-500 dark:text-gray-400 font-medium">2 Dorm • Venta</p>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">map</span>
+</button>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-2 px-4 pb-3 overflow-x-auto scrollbar-hide snap-x">
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary text-white pl-4 pr-4 shadow-sm snap-start">
+<span class="material-symbols-outlined" style="font-size: 18px;">tune</span>
+<span class="text-sm font-medium">Filtros</span>
+<div class="flex items-center justify-center bg-white/20 rounded-full h-5 w-5 text-[10px] font-bold">2</div>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 pl-3 pr-3 snap-start">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Precio</span>
+<span class="material-symbols-outlined text-gray-500" style="font-size: 18px;">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 pl-3 pr-3 snap-start">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Tipo</span>
+<span class="material-symbols-outlined text-gray-500" style="font-size: 18px;">expand_more</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center gap-x-1.5 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 pl-3 pr-3 snap-start">
+<span class="text-[#111418] dark:text-gray-200 text-sm font-medium">Más recientes</span>
+<span class="material-symbols-outlined text-gray-500" style="font-size: 18px;">sort</span>
+</button>
+</div>
+</div>
+<!-- Meta Text -->
+<div class="bg-background-light dark:bg-background-dark pt-4 pb-2 px-4">
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">34 propiedades encontradas</p>
+</div>
+<!-- Content Feed -->
+<div class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark px-4 pb-20 space-y-4">
+<!-- Card 1 -->
+<div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e2329] shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="relative w-full aspect-[4/3] bg-gray-200 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern apartment interior with large windows and bright living room" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_P4xYWuE-TwLlM6RESj531qljm80x6NP_Fs-19aLNJjivHcv9LrxQU35PVTWxMUAydjZkLrZQhr5Chy-ynPtkvZ-J-17UEl8Fa_RkKhx6CtxVB1TR-j_CNhGsVfqVXSF7GTHG_oBxDNOwdnPCNFtpjmtgNOEUx91uVPM4Zw9sJbdvydnWaPncSNgSh0j7gRweR6mbZWBZS2L_WIM4VS5RkqCtV9Nc5s29JnFlHYtsARDnbB0Do-AhxEOtGSFw9WMtqDlkHi2t-qw");'>
+</div>
+<!-- Badges -->
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-2.5 py-1 rounded shadow-sm">
+                        VENTA
+                    </div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 dark:bg-black/60 text-gray-400 hover:text-red-500 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined filled" style="font-size: 20px;">favorite</span>
+</button>
+<!-- Price Overlay (Mobile Style) -->
+<div class="absolute bottom-3 left-3 bg-white/95 dark:bg-[#1e2329]/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
+<p class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">USD 120.000</p>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-[#111418] dark:text-white text-base font-semibold leading-tight mb-1">Moderno Depto en Palermo Soho</h3>
+<div class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined mr-1" style="font-size: 16px;">location_on</span>
+                                Av. Santa Fe 3200, Palermo
+                            </div>
+</div>
+</div>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-700 my-1"></div>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bed</span>
+<span class="font-medium">3</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bathtub</span>
+<span class="font-medium">2</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">straighten</span>
+<span class="font-medium">85 m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 (Featured) -->
+<div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e2329] shadow-sm hover:shadow-md transition-shadow cursor-pointer ring-1 ring-primary/20">
+<div class="relative w-full aspect-[4/3] bg-gray-200 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Luxurious house exterior with garden and modern architecture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwxJuZxsxRB1FBOtPGk1Rfi5W04g_sOiyzXNQM0Q2GzRHjS6fPKlriyysB4_wYHHLqyAhvjjDOQbiJV6AyN4VaNxap5n1EO59VKBZN358Sl7HFE3T80GL6s7f1dmoAn5x-F6iB98yjg-dBmAbA-WOASx3nVhUUysdHNjU67TboSazAvC4sdPlsFneeA3NZ-eW3HHQHt0OPWVw-OSTZCh5KZGFMIL3QoG6FELBllLEx-RRUxSSkHwMlMl6ykj094GARtHmXuRR-a2w");'>
+</div>
+<div class="absolute top-3 left-3 bg-[#111418] text-white text-xs font-bold px-2.5 py-1 rounded shadow-sm">
+                        DESTACADO
+                    </div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 dark:bg-black/60 text-gray-400 hover:text-red-500 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/95 dark:bg-[#1e2329]/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
+<p class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">USD 350.000</p>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-[#111418] dark:text-white text-base font-semibold leading-tight mb-1">Casa con Jardín en Belgrano R</h3>
+<div class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined mr-1" style="font-size: 16px;">location_on</span>
+                                Calle Falsa 123, Belgrano
+                            </div>
+</div>
+</div>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-700 my-1"></div>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bed</span>
+<span class="font-medium">4</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bathtub</span>
+<span class="font-medium">3</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">straighten</span>
+<span class="font-medium">210 m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1e2329] shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+<div class="relative w-full aspect-[4/3] bg-gray-200 overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Cozy minimalist bedroom with soft lighting and wooden floor" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMF1mjQuLf2gpgA4-0czaCSd7LRr5wq_6s1f5kHPEw0Hkrmsoo6G5SKiwf3qrBB03uGkW0SZyyTeJUwt4rGuUp0AjJx4b1mQexdJSUlrJQJ_uDvFXzgUq4JCSh7yofw34C6uthTVAo7hEwYOUEUVkSyAkPtJbJbwhNO8VgmpADSZh2QqKrpeq5JVWVNPMwHeg21lWQgdNIiIjb0u3_YT4IE-zUvXRN3lIJV6c9QSNmOXwdto-b0tPGl2Y1ff75IhrR_5Kr_eaktwg");'>
+</div>
+<div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-bold px-2.5 py-1 rounded shadow-sm">
+                        ALQUILER
+                    </div>
+<button class="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 dark:bg-black/60 text-gray-400 hover:text-red-500 transition-colors backdrop-blur-sm">
+<span class="material-symbols-outlined" style="font-size: 20px;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 bg-white/95 dark:bg-[#1e2329]/95 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-sm">
+<p class="text-[#111418] dark:text-white text-lg font-bold tracking-tight">USD 850<span class="text-sm font-normal text-gray-500 dark:text-gray-400 ml-1">/mes</span></p>
+</div>
+</div>
+<div class="flex flex-col p-4 gap-2">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-[#111418] dark:text-white text-base font-semibold leading-tight mb-1">Loft Industrial en Colegiales</h3>
+<div class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+<span class="material-symbols-outlined mr-1" style="font-size: 16px;">location_on</span>
+                                Av. Federico Lacroze 2800
+                            </div>
+</div>
+</div>
+<div class="h-px w-full bg-gray-100 dark:bg-gray-700 my-1"></div>
+<div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bed</span>
+<span class="font-medium">1</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">bathtub</span>
+<span class="font-medium">1</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined" style="font-size: 18px;">straighten</span>
+<span class="font-medium">55 m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4 (Small - Compact for variety/end of list) -->
+<div class="flex rounded-xl bg-white dark:bg-[#1e2329] shadow-sm hover:shadow-md transition-shadow cursor-pointer overflow-hidden h-32">
+<div class="w-32 h-full bg-cover bg-center shrink-0" data-alt="Small kitchen area with modern appliances" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArktnLWQ2e5yDIz_vGtiY3Ai90AZLOuS-M3lrxzzz5tjtyG_hNibiy-_ODl4PLsDKYUy82ktoG5iYjB9ZaFAwi16bYJesc8lTnwXR7Yv6kgxXcGtV4ejt36gnFRyW7YjVQqpmMaeIQ1BGnoRWPsnhDGx3K7jwyBfwScSJycbTfCJ4h0m2kt2-6dHBFKkUjvlTkrZYDRV4lfZeQ_w9Q2Urdec8Mn8vxHwbRzJis27EMHmruts4uhsuXfHel2JN_KQoCjYq-UtTj7AE");'>
+</div>
+<div class="flex flex-col justify-center p-3 flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<span class="text-[10px] font-bold text-primary uppercase tracking-wide">Nuevo ingreso</span>
+<span class="material-symbols-outlined text-gray-400" style="font-size: 18px;">favorite</span>
+</div>
+<h3 class="text-[#111418] dark:text-white text-sm font-bold truncate">Monoambiente luminoso</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 truncate mb-2">Güemes 4400, Palermo</p>
+<div class="mt-auto flex items-end justify-between">
+<p class="text-[#111418] dark:text-white text-base font-bold">USD 78.000</p>
+<span class="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded">32 m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-around bg-white dark:bg-[#111418] border-t border-gray-100 dark:border-gray-800 pb-safe pt-2 max-w-md mx-auto h-[70px]">
+<button class="flex flex-col items-center justify-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors" style="font-size: 24px;">home</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Inicio</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16">
+<span class="material-symbols-outlined text-primary fill-current" style="font-size: 24px;">search</span>
+<span class="text-[10px] font-medium text-primary">Buscar</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors" style="font-size: 24px;">favorite</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Favoritos</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 w-16 group">
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors" style="font-size: 24px;">person</span>
+<span class="text-[10px] font-medium text-gray-400 group-hover:text-primary transition-colors">Perfil</span>
+</button>
+</div>
+</div>
+</body></html>

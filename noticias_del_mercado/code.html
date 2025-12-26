@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Noticias del Mercado - Inmobiliaria en Equipo</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-slate-50 font-display overflow-x-hidden flex flex-col min-h-screen">
+<!-- Sticky Header -->
+<div class="sticky top-0 z-50 bg-white/95 dark:bg-[#1a2632]/95 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="flex flex-col w-full">
+<!-- Brand Row -->
+<div class="flex items-center justify-between px-4 py-2">
+<div class="flex items-center gap-2">
+<div class="flex items-center justify-center size-8 rounded bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[20px]">real_estate_agent</span>
+</div>
+<span class="text-sm font-bold tracking-wide text-primary uppercase">Inmobiliaria en Equipo</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5HfwlOCa_qhtXG54q74Uv6oP8HglHRS7JmtJfRgkxgMWUYAsdTLj8knUr_LlCL3wfFwKn4kKcdMQNRCbT6Jj6PzjRYivgIL3vR2QeHt5IbWYR88_g9fqlHbjx9PR20kY4nTB1KsepP14tJI-5dNpMJuIFHHhhkFaJ8V20qfRhrtVB5ZNDsGFFQrRwn-7GJwAIH_VqlMawyjnKFmRc8_uB8stAXYoPo3axfpg-HooM0fIxfqMGs-872nxiYUh5291ny7dQaHCsK9U"); background-size: cover; background-position: center;'></div>
+</div>
+</div>
+<!-- Title Row -->
+<div class="px-4 pb-3 pt-1">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white leading-tight">Noticias del Mercado</h1>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 pb-24"> <!-- Padding bottom for navigation bar -->
+<!-- Filter Chips -->
+<div class="w-full overflow-x-auto scrollbar-hide">
+<div class="flex gap-3 px-4 py-3 min-w-max">
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-primary px-5 shadow-sm shadow-primary/30 transition-all">
+<p class="text-white text-sm font-medium leading-normal">Todo</p>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1a2632] border border-slate-200 dark:border-slate-700 px-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Tendencias</p>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1a2632] border border-slate-200 dark:border-slate-700 px-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Hipotecas</p>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1a2632] border border-slate-200 dark:border-slate-700 px-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Comercial</p>
+</button>
+<button class="flex h-9 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-[#1a2632] border border-slate-200 dark:border-slate-700 px-5 transition-colors hover:bg-slate-50 dark:hover:bg-slate-800">
+<p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Reformas</p>
+</button>
+</div>
+</div>
+<!-- Featured Section -->
+<div class="px-4 py-2">
+<div class="flex items-center justify-between mb-3 mt-2">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Destacado</h2>
+</div>
+<!-- Hero Card -->
+<div class="group relative flex flex-col overflow-hidden rounded-xl bg-white dark:bg-[#1a2632] shadow-sm border border-slate-100 dark:border-slate-800 transition-all active:scale-[0.98]">
+<div class="aspect-video w-full bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Modern glass skyscraper reflecting the blue sky, representing real estate growth" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEmr6iWZS1oLL5CPP3Y4WWZ0f-1ZOtpEIml6BLYT6R8ablM3f6r4XBk_09yMkotvphMEDLt_VqMoUo5ASNuSQ92DZEIF0Ct247Fi6vzTWko36ksfWSUQIUOPofdi6l2EuJkEsZCV48FWHhl9c1D8g1DFVr4BrNON3-Jos6xzpA5C1K7AMIgRD6zxpIrmWFcXa_4fpf23rNm38bNh0m4VLNhYLqDTD0fQunJDlGs-B39-E8awT7BH8-jmOsf_3HkZkhBbM-d1TAbuU");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute top-3 left-3">
+<span class="inline-flex items-center rounded-md bg-primary px-2.5 py-1 text-xs font-semibold text-white shadow-sm">
+                            Tendencias
+                        </span>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<h3 class="text-xl font-bold leading-tight text-slate-900 dark:text-white">El precio de la vivienda sube un 5% este trimestre en zonas costeras</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm line-clamp-2">
+                        El informe trimestral revela un aumento significativo en la demanda de propiedades vacacionales, impulsando los precios hacia arriba en un mercado que se recupera rápidamente.
+                    </p>
+<div class="mt-2 flex items-center justify-between">
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> Hace 2 horas
+                        </span>
+<span class="text-xs text-slate-400 dark:text-slate-500 font-medium">5 min lectura</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent News List -->
+<div class="px-4 pt-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Lo último</h3>
+<div class="flex flex-col gap-4">
+<!-- List Item 1 -->
+<article class="flex gap-4 rounded-xl bg-white dark:bg-[#1a2632] p-3 shadow-sm border border-slate-100 dark:border-slate-800 active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-700">
+<div class="h-full w-full bg-cover bg-center" data-alt="Pair of hands holding a model house" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqMTLzZmLQ-CN-VHooX1gQtjzf1zmiBTKpOToPMKhFqMnIGPvvt30le_uFMiIfzzaeWPJZ4pxUQoqGa6hlR431aN8aFjn-b6YwU_pdiATs8wdmIX3KhU1FQgLnCAXhxEPLXaqVKneLn_TKzwKx0yTixIhDqdJFUmE9LKb4sOAWjCB1maAjViPsVP83OeavCYXtNs8rcT-56nQpSDyw0yqd9KMMtv4aaaQnB0pIYD4-Bgm-7I1WNrlVKcAlxj4WtTvpAKbc4zPXdVk");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<span class="mb-1 inline-block text-[10px] font-bold uppercase tracking-wider text-primary">Consejos</span>
+<h4 class="text-sm font-bold leading-snug text-slate-900 dark:text-white line-clamp-2">Consejos clave para vender tu casa rápido en 2024</h4>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+<span>Hace 4 horas</span>
+<span>•</span>
+<span>3 min</span>
+</div>
+</div>
+</article>
+<!-- List Item 2 -->
+<article class="flex gap-4 rounded-xl bg-white dark:bg-[#1a2632] p-3 shadow-sm border border-slate-100 dark:border-slate-800 active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-700">
+<div class="h-full w-full bg-cover bg-center" data-alt="Documents and keys on a wooden table" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZSPl_b2Mbi1tRV5zUS3xZqU1PyLdXgPYoEFbzUbjNcOXb68_G99lhmU1wBHOXkAKc0BtoDW_izcHfm9SP7dnZH5Dn6CYdC06Z7rZp8odc_y3hb7ykx9mdT8rZY3JWhwa086495ECfyFDRy8XIAtv-3e8Lno-lWTF9e6TdkIDYCIy2qmPYBp5PLGlb-qHf-1U4-kvE5SrFU_VqKhrDrxL1_W5Kf9orpsgiRX_QPYAfz2ei7SlNgV9Bw3IG6br3O16izLtvtd0tOH8");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<span class="mb-1 inline-block text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">Legal</span>
+<h4 class="text-sm font-bold leading-snug text-slate-900 dark:text-white line-clamp-2">Nuevas regulaciones de alquiler: Lo que necesitas saber</h4>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+<span>Hace 6 horas</span>
+<span>•</span>
+<span>7 min</span>
+</div>
+</div>
+</article>
+<!-- List Item 3 -->
+<article class="flex gap-4 rounded-xl bg-white dark:bg-[#1a2632] p-3 shadow-sm border border-slate-100 dark:border-slate-800 active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-700">
+<div class="h-full w-full bg-cover bg-center" data-alt="Map with pins showing profitable investment zones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSCHZ7i9RdBAiuA3dw-_3mNnjOvEm8JgibtBGHCBCgFgKk5g15zKQumAw8XR-jbfKNJi03JSiTSoJG77rn646QAFicVdyaUq4Op-RW6DTL4EyghuWvh-VDC06cVCFI_BwcOVA8dNNyiWBx0WLeZJEx8TP1YBeEHZhiPhCmYV8i5icAIKk5yDORKP74ipkEjXoRSfL-5ht38BRmBempS8jNooho1jPabd3s2x7MnJ_kkHI-zqElmxqH3QFaeIYo8wECWSZKUZopUj4");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<span class="mb-1 inline-block text-[10px] font-bold uppercase tracking-wider text-green-600 dark:text-green-400">Inversión</span>
+<h4 class="text-sm font-bold leading-snug text-slate-900 dark:text-white line-clamp-2">Las zonas más rentables para invertir hoy</h4>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+<span>Hace 1 día</span>
+<span>•</span>
+<span>4 min</span>
+</div>
+</div>
+</article>
+<!-- List Item 4 -->
+<article class="flex gap-4 rounded-xl bg-white dark:bg-[#1a2632] p-3 shadow-sm border border-slate-100 dark:border-slate-800 active:bg-slate-50 dark:active:bg-slate-800 transition-colors cursor-pointer">
+<div class="h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-200 dark:bg-slate-700">
+<div class="h-full w-full bg-cover bg-center" data-alt="Modern bright living room interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyVT7Fk-SKWkNsWU3PRiSnEDCMdIeJ0aZA0DRsKwQGRhikyCA61j6gDoZKm8HafWaWyIPeYG1-GqP6FPm6I6p9NubdTooKIEfle69z9B9wYEkkqQM24MxYRCWGOHyd6X_0N_P_2khTAES8mN0EjiX5uNpYDNLzeg6NQubHHPcuzTSTsS1lDoHID_AoKhBuXT9r9HbKPaZaao_8WJMxbNJkjdp5LLLg_MLpxXEGlJoD0YTQqhucsnqffML7MH6gF_YagGLgr2ky_EM");'>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between">
+<div>
+<span class="mb-1 inline-block text-[10px] font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">Diseño</span>
+<h4 class="text-sm font-bold leading-snug text-slate-900 dark:text-white line-clamp-2">Tendencias de diseño de interiores para primavera</h4>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
+<span>Hace 2 días</span>
+<span>•</span>
+<span>5 min</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Load More Button -->
+<div class="mt-6 flex justify-center pb-4">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 bg-white dark:bg-[#1a2632] shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                    Ver más noticias
+                    <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 z-40 w-full border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#1a2632] pb-safe pt-2">
+<div class="flex h-16 items-center justify-around px-2">
+<a class="group flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary dark:text-slate-500 dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">home</span>
+<span class="text-[10px] font-medium">Inicio</span>
+</a>
+<a class="group flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary dark:text-slate-500 dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">search</span>
+<span class="text-[10px] font-medium">Buscar</span>
+</a>
+<a class="group flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined text-[24px] fill-current">article</span>
+<span class="absolute -right-0.5 -top-0.5 flex size-2.5">
+<span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex size-2.5 rounded-full bg-primary border-2 border-white dark:border-[#1a2632]"></span>
+</span>
+</div>
+<span class="text-[10px] font-bold">Noticias</span>
+</a>
+<a class="group flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary dark:text-slate-500 dark:hover:text-primary" href="#">
+<span class="material-symbols-outlined text-[24px] group-hover:scale-110 transition-transform">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+<!-- Safe area spacing for iOS home indicator -->
+<div class="h-5 w-full bg-white dark:bg-[#1a2632]"></div>
+</nav>
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publicar Propiedad - Inmobiliaria en Equipo</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#137fec",
+                "background-light": "#f6f7f8",
+                "background-dark": "#101922",
+                "surface-light": "#ffffff",
+                "surface-dark": "#1a2632",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white antialiased">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-50 flex items-center bg-surface-light dark:bg-surface-dark p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="text-[#111418] dark:text-white flex size-12 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</div>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Publicar Propiedad</h2>
+<div class="flex w-12 items-center justify-end cursor-pointer">
+<p class="text-primary text-base font-bold leading-normal tracking-[0.015em] shrink-0">Guardar</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4">
+<!-- Progress Indicator -->
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-gray-200 dark:bg-gray-700"></div>
+</div>
+<!-- Image Gallery Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Galería de fotos</h2>
+<span class="text-xs font-medium text-primary cursor-pointer">Editar</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<!-- Upload Button -->
+<div class="flex flex-col items-center justify-center aspect-square rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-800 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500 text-3xl">add_a_photo</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 mt-1 font-medium">Agregar</span>
+</div>
+<!-- Existing Images -->
+<div class="relative group">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg aspect-square" data-alt="Modern living room with sunlight" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCliJ4frp5CfwwcMrMvNyOH5GL6CnoulsL2jKIH_D6Rxc3QunLPvGQKC_K3Tn4uzAhMe-c9mKqeloBErLDwecXR2vwYDCs1K9VD9HxsEFBtBWSeTyecUfu-2E79oOazcWeVjLg14UJoojHNQyO3flxdXBRPblCVh1098dZj2vTw9pC-5QfJHkTHimTPt6xlBIRl5RnpxyRxQ1c5II1XPMoJaKJmQ62HsSdi_5WndmDK3gG-VLWA-lkJ-m2FBWz9Mtylnn8mqfVP53o");'></div>
+<div class="absolute top-1 right-1 bg-black/50 rounded-full p-1 cursor-pointer">
+<span class="material-symbols-outlined text-white text-xs block">close</span>
+</div>
+</div>
+<div class="relative group">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-lg aspect-square" data-alt="Spacious kitchen interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFIYGP_HalOzCFhKr5-mbQ1MfEoIrv2KbNyqcn4w9d9D6pdc53AJ39vhvjxO_TYMCMo6jtG9i2E85NHUWTKJDP6v5D45DOqb1d2fNBPyWmPGje2hXRB6i1Ypoy2FEaCU5tF8BXG4XP0ZHKgHoORF9_sfGJkRPGo6sbanFNBOh-jhWcHkCrbDJ2lwecjhBP9o_1Yx685IFohN0HsoTqmABVauFiZg3suB8inbu9CZkRBoMmq0oENI0iBk3Qs9xFdkCqhwWnfGXQwgk");'></div>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs mt-3">Arrastra para reordenar. La primera foto será la portada.</p>
+</div>
+<!-- Basic Info Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-5">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Información Principal</h2>
+<!-- Property Title -->
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Título del anuncio</p>
+<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#617589] dark:placeholder:text-gray-500 px-4 text-base font-normal leading-normal transition-all" placeholder="Ej. Casa moderna en el centro" value="Casa luminosa con jardín"/>
+</label>
+<!-- Property Type Selector -->
+<div class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Tipo de propiedad</p>
+<div class="flex p-1 bg-gray-100 dark:bg-gray-800 rounded-lg">
+<button class="flex-1 py-2 text-sm font-semibold rounded-md shadow-sm bg-white dark:bg-gray-700 text-primary dark:text-white transition-all">Casa</button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all">Depto</button>
+<button class="flex-1 py-2 text-sm font-medium rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all">Terreno</button>
+</div>
+</div>
+<!-- Price -->
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Precio</p>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="text-gray-500 dark:text-gray-400 text-lg">$</span>
+</div>
+<input class="form-input flex w-full rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#617589] pl-8 px-4 text-base font-normal leading-normal transition-all" placeholder="0.00" type="number" value="250000"/>
+<div class="absolute inset-y-0 right-0 flex items-center">
+<select class="h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 dark:text-gray-300 sm:text-sm rounded-md focus:ring-0 focus:border-transparent">
+<option>USD</option>
+<option>EUR</option>
+<option>MXN</option>
+</select>
+</div>
+</div>
+</label>
+</div>
+<!-- Details Grid -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-5">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Detalles</h2>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Habitaciones</p>
+<div class="flex items-center border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 h-12 px-3">
+<span class="material-symbols-outlined text-gray-400 mr-2">bed</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-[#111418] dark:text-white" placeholder="0" type="number" value="3"/>
+</div>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Baños</p>
+<div class="flex items-center border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 h-12 px-3">
+<span class="material-symbols-outlined text-gray-400 mr-2">bathtub</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-[#111418] dark:text-white" placeholder="0" type="number" value="2"/>
+</div>
+</label>
+<label class="flex flex-col w-full col-span-2">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Superficie Total (m²)</p>
+<div class="flex items-center border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 h-12 px-3">
+<span class="material-symbols-outlined text-gray-400 mr-2">square_foot</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-[#111418] dark:text-white" placeholder="0" type="number" value="180"/>
+</div>
+</label>
+</div>
+</div>
+<!-- Location Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-5">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Ubicación</h2>
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2">Dirección completa</p>
+<div class="flex items-center border border-[#dbe0e6] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 h-12 px-3 transition-all focus-within:ring-2 focus-within:ring-primary/50">
+<span class="material-symbols-outlined text-gray-400 mr-2">location_on</span>
+<input class="w-full bg-transparent border-none focus:ring-0 p-0 text-[#111418] dark:text-white placeholder:text-[#617589]" placeholder="Calle y número, Ciudad"/>
+</div>
+</label>
+<!-- Map Placeholder -->
+<div class="w-full h-32 rounded-lg bg-gray-200 dark:bg-gray-700 overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="Map view of the city location" data-location="City Map" style="background-image: url('https://placeholder.pics/svg/300');"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<button class="bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow-md text-sm font-semibold text-primary">Ajustar en mapa</button>
+</div>
+</div>
+</div>
+<!-- Description Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-5">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Descripción</h2>
+<label class="flex flex-col w-full">
+<textarea class="form-textarea flex w-full resize-y min-h-[120px] rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 p-3 placeholder:text-[#617589] text-base font-normal leading-normal" placeholder="Describe los detalles de la propiedad, atracciones cercanas, etc..."></textarea>
+</label>
+</div>
+<!-- Amenities Section -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex flex-col gap-5">
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight">Características Adicionales</h2>
+<div class="flex flex-wrap gap-2">
+<!-- Active Chip -->
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/10 text-primary text-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">check</span>
+                        Balcón
+                    </button>
+<!-- Inactive Chips -->
+<button class="px-4 py-2 rounded-full border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        Jardín
+                    </button>
+<button class="px-4 py-2 rounded-full border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        Estacionamiento
+                    </button>
+<button class="px-4 py-2 rounded-full border border-primary bg-primary/10 text-primary text-sm font-semibold transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">check</span>
+                         Seguridad
+                    </button>
+<button class="px-4 py-2 rounded-full border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        Piscina
+                    </button>
+<button class="px-4 py-2 rounded-full border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        Gimnasio
+                    </button>
+<button class="px-4 py-2 rounded-full border border-[#dbe0e6] dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        SUM
+                    </button>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-white/80 dark:bg-[#101922]/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 z-40">
+<button class="w-full bg-primary hover:bg-blue-600 text-white font-bold h-12 rounded-lg shadow-lg flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+<span>Publicar Propiedad</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

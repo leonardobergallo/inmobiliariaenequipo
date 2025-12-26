@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recuperar Contraseña - Inmobiliaria en Equipo</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#111418] dark:text-white antialiased">
+<div class="relative flex h-full min-h-screen w-full max-w-md mx-auto flex-col overflow-x-hidden bg-background-light dark:bg-background-dark shadow-xl">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="flex size-12 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-[#111418] dark:text-white group">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back_ios">arrow_back_ios_new</span>
+</button>
+<h2 class="text-[#111418] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">
+                Recuperar Contraseña
+            </h2>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 flex flex-col px-4 pt-4 pb-8">
+<!-- Image / Illustration -->
+<div class="flex w-full justify-center py-6">
+<div class="w-40 h-40 bg-primary/10 rounded-full flex items-center justify-center">
+<div class="w-full h-full bg-center bg-no-repeat bg-contain opacity-90" data-alt="Illustration of a secure lock representing password recovery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaNTRgqIPPie6z14jflSjq3MGh52NIqqUQcrjioOwqTpWbjtOTgGc7vRTInReHoGhBO8vCKRoJHD7ga441-7VP8INdCZT_MR5xha_oAZ8kCAkaKOl70FyNJRx6z7u17vPPgHrgV3yhEniZFQyNokaK7eDZkbGiRM5JlE20N3-bUf4uO8llhsOKw6qpFLhRjKI3WQLhX3HbszS7uog-mdmCcekiu-sgnqHu6H4FRivkaGxCIM7djUZPJg5QuwwtkrWidmdBIB9O36E");'>
+</div>
+</div>
+</div>
+<!-- HeadlineText -->
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[28px] font-bold leading-tight text-center pb-2">
+                ¿Olvidaste tu contraseña?
+            </h1>
+<!-- BodyText -->
+<p class="text-[#617589] dark:text-[#9BA1A6] text-base font-normal leading-normal pb-8 text-center px-2">
+                No te preocupes. Ingresa el correo electrónico asociado a tu cuenta y te enviaremos un enlace para crear una nueva.
+            </p>
+<!-- TextField -->
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-[#111418] dark:text-white text-sm font-medium leading-normal pb-2 ml-1">Correo Electrónico</p>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#617589] dark:text-[#9BA1A6]" style="font-size: 20px;">mail</span>
+</div>
+<input class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-[#111418] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#dbe0e6] dark:border-[#3E4C59] bg-white dark:bg-[#1A2633] focus:border-primary h-14 placeholder:text-[#617589] dark:placeholder:text-[#637587] pl-11 pr-4 text-base font-normal leading-normal transition-all" placeholder="ejemplo@correo.com" type="email" value=""/>
+</div>
+</label>
+</div>
+<!-- Spacer pushes button to bottom on tall screens, or just adds space on small ones -->
+<div class="flex-1 min-h-[40px]"></div>
+<!-- Primary Action Button -->
+<div class="flex flex-col gap-4">
+<button class="flex w-full items-center justify-center rounded-lg bg-primary hover:bg-blue-600 active:bg-blue-700 text-white font-bold h-12 px-5 transition-colors shadow-sm dark:shadow-none">
+<span class="text-base tracking-wide">Enviar correo de recuperación</span>
+</button>
+<button class="flex w-full items-center justify-center rounded-lg text-primary hover:bg-primary/5 font-medium h-10 px-5 transition-colors">
+<span class="text-sm">Regresar al inicio de sesión</span>
+</button>
+</div>
+</div>
+<!-- Bottom safe area spacer for iOS -->
+<div class="h-5 w-full"></div>
+</div>
+</body></html>
